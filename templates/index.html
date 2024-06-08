@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<head>
+    <title>Select Form</title>
+    <style>
+        .submitButton {
+            background-color: #83B4FF;
+            border: none;
+            color: white;
+            padding: 10px 28px;
+            text-decoration: none;
+            margin: 15px auto;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        body {
+            background-color: rgb(49, 51, 56);
+        }
+        h1 {
+            margin: 10;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        label, input, p {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+        }
+        .outer {
+            background-color: rgb(230, 230, 230);
+            padding: 10px;
+            border-radius: 10px;
+            width: 550px;
+            height: 700px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <h1>Please Insert Your Data</h1>
+        <form action="/" method="post">
+            <table>
+                <tr>
+                    <td><label for="cg">Capital Gain: </label></td>
+                    <td><input type="number" name="capitalGain" id="cg" min="0" required></td>
+                </tr>
+                <tr>
+                    <td><label for="cl">Capital Loss: </label></td>
+                    <td><input type="number" name="capitalLoss" id="cl" min="0" required></td>
+                </tr>
+                <tr>
+                    <td><label for="hour">Incident hour of the day: </label></td>
+                    <td><input type="number" name="incidentHour" id="hour" min="0" max="23" required></td>
+                </tr>
+                <tr>
+                    <td><label for="vehicle">Number of vehicle involved: </label></td>
+                    <td><input type="number" name="vehicleInvolved" id="vehicle" min="0" required></td>
+                </tr>
+                <tr>
+                    <td><label for="Witnesses">Witnesses: </label></td>
+                    <td><input type="number" name="Witnesses" id="Witnesses" min="0" required></td>
+                </tr>
+                <tr>
+                    <td><label for="claim">Total claim amount: </label></td>
+                    <td><input type="number" name="totalClaim" id="claim" min="0" required></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender: </label></td>
+                    <td>
+                        <input type="radio" name="gender" id="Male" value="Male" required>
+                        <label for="Male">Male</label>
+                        <input type="radio" name="gender" id="Female" value="Female" required>
+                        <label for="Female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="occupation">Occupation: </label></td>
+                    <td>
+                        <select name="occupation" id="occupation" required>
+                            <option value="" selected disabled hidden>--- Please Choose Your Occupation ---</option>
+                            <option value="adm-clerical">adm-clerical</option>
+                            <option value="armed-forces">armed-forces</option>
+                            <option value="craft-repair">craft-repair</option>
+                            <option value="exec-managerial">exec-managerial</option>
+                            <option value="farming-fishing">farming-fishing</option>
+                            <option value="handlers-cleaners">handlers-cleaners</option>
+                            <option value="machine-op-inspct">machine-op-inspct</option>
+                            <option value="other-service">other-service</option>
+                            <option value="priv-house-serv">priv-house-serv</option>
+                            <option value="prof-specialty">prof-specialty</option>
+                            <option value="protective-serv">protective-serv</option>
+                            <option value="sales">sales</option>
+                            <option value="tech-support">tech-support</option>
+                            <option value="transport-moving">transport-moving</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="hobbies">Hobbies: </label></td>
+                    <td>
+                        <select name="hobbies" id="hobbies" required>
+                            <option value="" selected disabled hidden>--- Please Chooese Your Hobbie ---</option>
+                            <option value="chess">chess</option>
+                            <option value="cross-fit">cross-fit</option>
+                            <option value="other">other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="incident">Incident: </label></td>
+                    <td>
+                        <select name="incident" id="incident" required>
+                            <option value="" selected disabled hidden>--- Please Choose Incident Type ---</option>
+                            <option value="Multi-vehicle Collision">Multi-vehicle Collision</option>
+                            <option value="Parked Car">Parked Car</option>
+                            <option value="Single Vehicle Collision">Single Vehicle Collision</option>
+                            <option value="Vehicle Theft">Vehicle Theft</option>
+                        </select>           
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Collision">Collision: </label></td>
+                    <td>
+                        <select name="Collision" id="Collision" required>
+                            <option value="" selected disabled hidden>--- Please Choose Collision Type ---</option>
+                            <option value="Front Collision">Front Collision</option>
+                            <option value="Rear Collision">Rear Collision</option>
+                            <option value="Side Collision">Side Collision</option>
+                            <option value="other">other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="severity">Severity: </label></td>
+                    <td>
+                        <select name="severity" id="severity" required>
+                            <option value="" selected disabled hidden>--- Please Choose Severity Type ---</option>
+                            <option value="Major Damage">Major Damage</option>
+                            <option value="Minor Damage">Minor Damage</option>
+                            <option value="Total Loss">Total Loss</option>
+                            <option value="Trivial Damage">Trivial Damage</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="authorities">Authorities Contacted: </label></td>
+                    <td>
+                        <select name="authorities" id="authorities" required>
+                            <option value="" selected disabled hidden>--- Please Choose Authorities Contacted ---</option>
+                            <option value="Ambulance">Ambulance</option>
+                            <option value="Fire">Fire</option>
+                            <option value="None">None</option>
+                            <option value="Police">Police</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age: </label></td>
+                    <td>
+                        <select name="age" id="age" required>
+                            <option value="" selected disabled hidden>--- Please Choose Your Age ---</option>
+                            <option value="15-20">15-20</option>
+                            <option value="21-25">21-25</option>
+                            <option value="26-30">26-30</option>
+                            <option value="31-35">31-35</option>
+                            <option value="36-40">36-40</option>
+                            <option value="41-45">41-45</option>
+                            <option value="46-50">46-50</option>
+                            <option value="51-55">51-55</option>
+                            <option value="56-60">56-60</option>
+                            <option value="61-65">61-65</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="months">Months since joining: </label></td>
+                    <td>
+                        <select name="months" id="months" required>
+                            <option value="" selected disabled hidden>--- Please Choose Months ---</option>
+                            <option value="0-50">0-50</option>
+                            <option value="51-100">51-100</option>
+                            <option value="101-150">101-150</option>
+                            <option value="151-200">151-200</option>
+                            <option value="201-250">201-250</option>
+                            <option value="251-300">251-300</option>
+                            <option value="301-350">301-350</option>
+                            <option value="351-400">351-400</option>
+                            <option value="401-450">401-450</option>
+                            <option value="451-500">451-500</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="policy">Policy: </label></td>
+                    <td>
+                        <select name="policy" id="policy" required>
+                            <option value="" selected disabled hidden>--- Please Choose Your Policy Annual ---</option>
+                            <option value="very high">very high</option>
+                            <option value="high">high</option>
+                            <option value="medium">medium</option>
+                            <option value="low">low</option>
+                            <option value="very low">very low</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <center><input type="submit" name="" id="" class="submitButton"></center>
+        </form>
+        {% if hasil %}
+            {{ hasil | safe}}
+        {% endif %}
+    </div>
+</body>
+</html>
